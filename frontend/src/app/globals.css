@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-plex-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-plex-mono), ui-monospace, "Cascadia Mono", monospace;
+
+  /* Institutional navy: primary actions, navigation, headings */
+  --color-navy-950: #0a1a30;
+  --color-navy-900: #0e2240;
+  --color-navy-800: #15315a;
+  --color-navy-700: #1d4e89;
+  --color-navy-600: #2b62a3;
+  --color-navy-100: #dbe6f3;
+  --color-navy-50: #eef3f9;
+
+  /* Saffron: used sparingly for emphasis, never for large fills */
+  --color-saffron-700: #9a4a07;
+  --color-saffron-600: #b45309;
+  --color-saffron-100: #fdebd3;
+  --color-saffron-50: #fff7ed;
+
+  --color-canvas: #f3f4f6;
+  --color-line: #dadfe6;
+  --color-line-strong: #c3cad4;
+  --color-ink: #111827;
+  --color-body: #2b3442;
+  --color-muted: #5b6472;
+  --color-faint: #8a93a1;
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+  }
+  body {
+    @apply bg-canvas text-body font-sans text-[14px] leading-[1.5];
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply text-ink;
+  }
+  ::selection {
+    @apply bg-navy-100;
+  }
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-navy-600;
+  }
+}
+
+@utility tabular {
+  font-variant-numeric: tabular-nums;
+}

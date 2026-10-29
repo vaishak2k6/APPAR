@@ -1,0 +1,27 @@
+node_modules/
+.next/
+out/
+*.tsbuildinfo
+__pycache__/
+.pytest_cache/
+*.pyc
+.venv/
+.env
+.env*.local
+~$*
+.claude/
+
+# Local node install used only by the deck scripts
+build/
+
+# Deck workspace: keep only the generator script and its inputs
+work/*
+!work/build_human.py
+!work/icons.js
+!work/render.ps1
+!work/tpl_a.pptx
+!work/assets/
+!work/shots/
+
+# Older deck drafts (the final deck is APAAR-Satya_SIH2026_Final.*)
+APAAR-Satya_SIH2026_Idea.*
